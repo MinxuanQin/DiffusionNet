@@ -5,6 +5,8 @@ import torch
 from tqdm.auto import tqdm
 from PIL import Image
 
+# This version would store models temporally in .cache directory in home folder, which consumes too much memory
+# Need to change
 # 1. Load the autoencoder model which will be used to decode the latents into image space. 
 vae = AutoencoderKL.from_pretrained("CompVis/stable-diffusion-v1-4", subfolder="vae")
 
